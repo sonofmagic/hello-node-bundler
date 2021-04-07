@@ -11,9 +11,12 @@ const configs = projectList.map((name, idx) => {
   return {
     input: keyPathMap[name] + '/index.js',
     output: {
-      file: path.resolve(rootPath, 'dist', name, 'rollup/main.js'),
+      dir: path.resolve(rootPath, 'dist', name, 'rollup'),
+      entryFileNames: 'main.js',
+      // file: path.resolve(rootPath, 'dist', name, 'rollup/main.js'),
       format: 'cjs',
       sourcemap: true
+      // inlineDynamicImports: true
     },
     plugins: [json(), commonjs(), nodeResolve()]
   }

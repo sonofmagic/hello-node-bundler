@@ -1,4 +1,6 @@
+import '../common/main'
 import Express, { Router } from 'express'
+import { random } from 'lodash'
 
 const app = Express()
 
@@ -6,6 +8,9 @@ const router = Router()
 
 router.all('/', (req, res) => {
   res.send('hello world from express ' + Date.now())
+})
+router.all('/random', (req, res) => {
+  res.send(random())
 })
 app.use(router)
 app.listen(8001)

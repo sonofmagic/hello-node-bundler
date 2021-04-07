@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack:run": "webpack --config scripts/webpack.config.js",
     "rollup:run": "rollup -c scripts/rollup.config.js",
+    "esbuild:run": "node scripts/esbuild.entry.js",
     "all:run": "node scripts/index.js"
   },
   "repository": {
@@ -14,7 +15,7 @@
     "url": "git+https://github.com/sonofmagic/hello-node-bundler.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "icebreaker",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sonofmagic/hello-node-bundler/issues"

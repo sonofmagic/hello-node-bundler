@@ -7,6 +7,21 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "build all",
+      "program": "${workspaceFolder}/scripts/index.js",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "esbuild do build",
+      "program": "${workspaceFolder}/scripts/esbuild.entry.js",
+      "skipFiles": ["<node_internals>/**"]
+    },
+
+    {
+      "type": "node",
+      "request": "launch",
       "name": "webpack-dist-express",
       "program": "${workspaceFolder}/dist/express/webpack/main.js",
       "skipFiles": ["<node_internals>/**"]
@@ -30,6 +45,20 @@
       "request": "launch",
       "name": "rollup-dist-koa",
       "program": "${workspaceFolder}/dist/koa/rollup/main.js",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "esbuild-dist-express",
+      "program": "${workspaceFolder}/dist/express/esbuild/main.js",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "esbuild-dist-koa",
+      "program": "${workspaceFolder}/dist/koa/esbuild/main.js",
       "skipFiles": ["<node_internals>/**"]
     }
   ]

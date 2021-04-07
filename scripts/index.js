@@ -3,6 +3,7 @@ const rollupConfigs = require('./rollup.config')
 const webpack = require('webpack')
 const webpackConfigs = require('./webpack.config')
 async function build () {
+  // rollup build
   await Promise.all(
     rollupConfigs.map(async (x) => {
       const { output, ...input } = x
@@ -11,7 +12,7 @@ async function build () {
       await bundle.close()
     })
   )
-
+  // webpack build
   await Promise.all(
     webpackConfigs.map((x) => {
       return new Promise((resolve, reject) => {
@@ -24,6 +25,8 @@ async function build () {
       })
     })
   )
+
+  require('./esbuild.entry')
 }
 
 build()
