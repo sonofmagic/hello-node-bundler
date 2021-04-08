@@ -1,6 +1,6 @@
-# hello-node-bundler
 
-## Hello! Bundling for node , webpack , rollup and esbuild
+
+# Hello! Bundling for node , webpack , rollup and esbuild
 
 <!-- [源码地址](https://github.com/sonofmagic/hello-node-bundler) -->
 
@@ -29,7 +29,7 @@
 
 那么为啥要打包 nodejs 项目呢？ 有必要吗 ？ 这取决与我们自身遇到的场景
 
-### 场景
+### 普通部署场景
 
 让我们从 nodejs 的部署开始讲起
 
@@ -75,7 +75,7 @@
 
 在这样的场景下，就让我们的打包工具出厂，来帮助我们解决除开 `builtin-modules` 的第三方依赖了
 
-### Webpack
+### webpack
 
 先上一个 webpack tree shaking 的[文档](https://webpack.js.org/guides/tree-shaking/#root)
 
@@ -95,7 +95,7 @@ webpack 默认 nodejs inject:
 大体上和前端方面类似 (调试方面，我都开了`source-map`, 可以直接在 vscode 编译前的源码里加断点)
 
 
-### Rollup
+### rollup
 
 Rollup 里提到了一句
 
@@ -106,7 +106,7 @@ Rollup 里提到了一句
 rollup 默认 nodejs inject:  
 ![rollup inject](./assets/image/rollup.png)
 
-从图上可见，大家都有 `default` 会比较开心
+从图上可见，所有的包，经过处理之后，都有 `default` 或者在 `default` 中
 
 原因自然也是因为 `rollup` 主要的设计就是给 `esm` 用的
 
