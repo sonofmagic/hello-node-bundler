@@ -44,8 +44,11 @@
   },
   "dependencies": {
     "@koa/router": "^10.0.0",
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "koa": "^2.13.1",
-    "lodash": "^4.17.21"
+    "koa-bodyparser": "^4.3.0",
+    "lodash": "^4.17.21",
+    "vue": "^3.0.11"
   }
 }

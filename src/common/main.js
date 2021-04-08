@@ -8,7 +8,7 @@ import answer from './answer.js'
 /* TREE-SHAKING */
 import { cube } from './maths.js'
 
-Object.keys(constants).forEach(key => {
+Object.keys(constants).forEach((key) => {
   console.log(`The value of ${key} is ${constants[key]}`)
 })
 
@@ -34,7 +34,7 @@ export default function () {
 
 console.log(cube(5)) // 125
 
-const displayMath = 1
+const displayMath = Math.random() > 0.5 // 避免被优化
 // DYNAMIC IMPORTS
 if (displayMath) {
   import('./dynamic.js').then(function (maths) {

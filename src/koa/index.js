@@ -1,9 +1,17 @@
-import '../common/main'
+import { baz } from '../common/main'
+import { random } from 'lodash'
+import { reactive, isReactive } from 'vue'
+
 import Koa from 'koa'
 import Router from '@koa/router'
-import { random } from 'lodash'
+const bodyParser = require('koa-bodyparser')
+console.log(`baz:${baz()}`)
+const state = reactive({
+  name: 'John'
+})
+console.log(isReactive(state))
 const app = new Koa()
-
+app.use(bodyParser())
 const router = new Router()
 
 router.all('/', (ctx) => {
